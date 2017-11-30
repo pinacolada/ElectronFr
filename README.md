@@ -1,8 +1,3 @@
-# Je suis venu te dire
-Je suis venu te dire que je m'en vais 
-
-Et tes larmes n'y pourront rien changer.
-
-Comme dit si bien Verlaine au vent mauvais :
-
-Je suis venu te dire que je m'en vais.
+# Comment utiliser Electron
+L'utilisation de nodejs et d'electron n'est pas simple.
+Par un tutoriel progressif et simple, voyons quels outils et quelles méthodes utiliser. 
