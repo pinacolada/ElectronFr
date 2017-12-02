@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/pinacolada/ElectronFr/issues"
   },
-  "homepage": "https://github.com/pinacolada/ElectronFr#readme"
+  "homepage": "https://github.com/pinacolada/ElectronFr#readme",
+  "dependencies": {
+    "electron": "^1.7.9"
+  }
 }
