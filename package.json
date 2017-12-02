@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/pinacolada/ElectronFr#readme",
   "dependencies": {
-    "electron": "^1.7.9"
+    "electron": "^1.7.9",
+    "typescript": "^2.6.2"
   }
 }
