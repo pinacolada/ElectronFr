@@ -40,19 +40,21 @@ Pour installer typescript il faut utiliser la même comande. On vérifie qu'on e
 Et la fameuse commande **npm info ok** vous prouvera que tout s'est bien passé.
 La version installée est la **2.6.2** pour typescript et la **1.7.9** pour Electron.
 Nous venons d'installer 2 __dépendances__ dans notre projet (__package__) et cela se voit dans le fichier **package.json**.
-Il affiche maintenant ceci : 
+Il s'y est ajouté maintenant ceci : 
+```json
   "dependencies": {
     "electron": "^1.7.9",
     "typescript": "^2.6.2"
   }
+```  
 Dans Visual Studio Code (que je nommerai maintenant simplement __VSCode__), le package est modifié automatiquement par npm quand on fait une installation, afin de correspondre aux dernières modifications. Il est donc important que le fichier package.json soit créé __avant__ les autres. 
 # Récapitulatif 
 Ce tutoriel s'adresse à un utilisateur français, travaillant sous Windows. Il y a plein de tutoriels en anglais et pour d'autres systèmes d'exploitation... Ici, vous devez vous trouver tout le temps en terrain familier. 
 Vous devez avoir sur votre ordinateur [Visual Studio Code](https://code.visualstudio.com/) installé. 
 Vous créez sur votre ordinateur un dossier vide auquel vous donnez le nom de votre programme. Ce nom doit être assez court et écrit en minuscules (Vous comprendrez vite pourquoi).
 Vous devez avoir un compte sur Github ainsi que Github pour Windows installé. Si nécessaire, créez le compte après installation de [Github pour Windows](https://desktop.github.com/). C'est un logiciel écrit lui-même avec Electron ;) 
-* Installer d'abord le package npm init
-* Installer le créateur d'application electron 
-* Installer le langage typescript.
+[x] Créer le fichier de package à l'aide de la commande npm init
+[x] Installer dans ce dossier comme dépendance le créateur d'application electron 
+[x] Installer dans ce dossier comme dépendance le langage typescript.
 
-Normalement, tout est correct. __Vous pouvez commencer à coder__.
+Normalement, ceci est suffisant. __Vous pouvez commencer à coder__.
