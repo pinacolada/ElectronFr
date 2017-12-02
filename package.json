@@ -1,0 +1,26 @@
+{
+  "name": "electronfr",
+  "version": "1.0.0",
+  "description": "Comment utiliser Visual Studio Code avec Electron et Typescript ?",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pinacolada/ElectronFr.git"
+  },
+  "keywords": [
+    "Tutoriel",
+    "Electron",
+    "Typescript",
+    "Github",
+    "hsh"
+  ],
+  "author": "pina34colada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pinacolada/ElectronFr/issues"
+  },
+  "homepage": "https://github.com/pinacolada/ElectronFr#readme"
+}
