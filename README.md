@@ -12,4 +12,14 @@ Tout ceci peut être fait de façon interactive, à l'aide de la commande suivan
  - package name (nom attendu) : mettre le nom et éviter les majuscules
  - version (version attendue) : un numéro de version en 3 parties séparées par des points
  - description : taper un texte descriptif du programme
- -   
+ - entry point (index.js) : j'ai répondu index.js. Avec Electron ? Chercher l'utilité de cet index.js
+ - test command : J'ai répondu electron . (electron suivi d'un point)
+ - git repository : le répertoire proposé par défaut est le bon !
+ - keywords : ma réponse est Tutoriel Electron Typescript Github hsh avec juste des espaces entre les mots.
+ - author : pina34colada
+ - licence (ISC) : C'est la licence par défaut : Tout public.
+
+ # Fichier package créé à la fin de cet interrogatoire...
+
+ # Syntaxe d'un fichier .md (Titres, sous-titres, citations, caractères gras, etc.) 
+ 
