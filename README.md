@@ -43,7 +43,7 @@ Une puce ? C'est juste une étoile en début de ligne, par exemple. On crée tr�
 ## Balises de style 
 * **Gras** : Deux étoiles. Ceci est en **gras**
 * **Italiques** : Une étoile ou un souligné bas : ceci est en *italiques*, et ceci _aussi_ alors que ceci n'est qu'en **gras**.
-* **Souligné** : Deux traits __soulignés bas__ soulignent le texte ainsi __mis en valeur__.
+* **Souligné** : Deux traits __soulignés bas__ soulignaient (avant) le texte __mis en valeur__.
 ## Liens et images
 * Pour créer un lien on écrit le texte du lien entre crochets droits et l'url entre parenthèses juste après. Le _title_ facultatif est dans les parenthèses, séparé du lien par un espace.
 * Pour afficher une image, l'ordre est différent : on met d'abord un point d'exclamation, puis le texte de remplacement entre crochets, l'url et le title entre parenthèses enfin. 
@@ -53,18 +53,18 @@ Une puce ? C'est juste une étoile en début de ligne, par exemple. On crée tr�
 # Installer Electron 
 
 Une commande dans Visual Studio Code permet d'utiliser Electron dans le dossier en cours. Il faut toujours vérifier que vous êtes dans le bon dossier car tout se passera dedans. Ensuite, il faut simplement taper la commande
-`npm install electron -d`.
+`npm install electron -D`.
 Après 21.7 secondes (chez moi) et plein de lignes étranges, vous verrez s'afficher `npm info ok`.
 
 # Installer Typescript
 
 Pour installer typescript il faut utiliser la même comande. On vérifie qu'on est toujours dans le dossier de travail, puis on tape la commande 
-`npm install typescript -d`. 
+`npm install typescript -D`. 
 
 Durée de l'installation : 2.62 secondes... Oui, ça va vite. 
 Et la fameuse ligne d'information `npm info ok` vous prouvera que tout s'est bien passé.
 La version installée est la **2.6.2** pour typescript et la **1.7.9** pour Electron.
-Nous venons d'installer 2 __dépendances__ dans notre projet (__package__) et cela se voit dans le fichier **package.json**.
+Nous venons d'installer 2 _dépendances_ dans notre projet (_package_) et cela se voit dans le fichier **package.json**.
 Il s'y est ajouté maintenant ceci : 
 ```json
   "dependencies": {
@@ -72,13 +72,16 @@ Il s'y est ajouté maintenant ceci :
     "typescript": "^2.6.2"
   }
 ```  
-Dans Visual Studio Code (que je nommerai maintenant simplement __VSCode__), le package est modifié automatiquement par **npm** quand on fait une installation, afin de correspondre aux dernières modifications. Il est donc important que le fichier **package.json** soit créé __avant__ les autres. 
+Dans Visual Studio Code (que je nommerai maintenant simplement _VSCode_), le package est modifié automatiquement par **npm** quand on fait une installation, afin de correspondre aux dernières modifications. Il est donc important que le fichier **package.json** soit créé _avant_ les autres. 
 
 # Récapitulatif 
 
-* [] Créer le fichier **package.json** à l'aide de la commande `npm init`
-* [] Installer comme dépendance **nodejs** à l'aide de la commande `npm install node -D`
-* [] Installer comme dépendance le créateur d'application **electron** à l'aide de la commande `npm install electron -D`
-* [] Installer comme dépendance le langage **typescript**  à l'aide de la commande `npm install typescript -D`.
+* [*] Créer le fichier **package.json** à l'aide de la commande `npm init`
+Installer ensuite _comme dépendances_ (donc avec l'option -D):
+* [*] Installer **nodejs** à l'aide de la commande `npm install node -D`
+* [*] Installer le créateur d'application **electron** à l'aide de la commande `npm install electron -D`
+* [*] Installer le langage **typescript**  à l'aide de la commande `npm install typescript -D`.
+Installer _comme dépendance_ signifie installer des logiciels qui seront dans le dossier à la création mais qui seront retirés du package créé pour être diffusé.
 
-C'était facile, non ? Normalement, c'est aussi suffisant. __Vous pouvez commencer à coder__.
+C'était facile, non ? Normalement, c'est aussi suffisant. _Vous pourriez commencer à coder_.
+En réalité, il nous faut aussi nous simplifier la vie en tant que codeur. Il y a d'autres choses à modifier.

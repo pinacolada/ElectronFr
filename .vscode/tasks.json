@@ -5,11 +5,12 @@
             "type": "npm",
             "script": "test",
             "problemMatcher": []
-        },         
+        },
         {
-            "type": "shell", 
-            "command": "electron index.html",         
-            "label": "Launch Electron App"
-        } 
+            "type": "shell",
+            "command": "electron index.html",
+            "label": "Launch Electron App",
+            "problemMatcher": []
+        }
     ]
 }
