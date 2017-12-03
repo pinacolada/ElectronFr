@@ -23,5 +23,12 @@
     "url": "https://github.com/pinacolada/ElectronFr/issues"
   },
   "homepage": "https://github.com/pinacolada/ElectronFr#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@types/node": "^8.0.53"
+  },
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "node": "^9.2.0",
+    "typescript": "^2.6.2"
+  }
 }

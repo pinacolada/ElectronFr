@@ -77,7 +77,8 @@ Dans Visual Studio Code (que je nommerai maintenant simplement __VSCode__), le p
 # Récapitulatif 
 
 * [] Créer le fichier **package.json** à l'aide de la commande `npm init`
-* [] Installer comme dépendance le créateur d'application **electron** à l'aide de la commande `npm install electron -d`
-* [] Installer comme dépendance le langage **typescript**  à l'aide de la commande `npm install typescript -d`.
+* [] Installer comme dépendance **nodejs** à l'aide de la commande `npm install node -D`
+* [] Installer comme dépendance le créateur d'application **electron** à l'aide de la commande `npm install electron -D`
+* [] Installer comme dépendance le langage **typescript**  à l'aide de la commande `npm install typescript -D`.
 
 C'était facile, non ? Normalement, c'est aussi suffisant. __Vous pouvez commencer à coder__.
