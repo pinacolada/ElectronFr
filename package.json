@@ -4,7 +4,7 @@
   "description": "Comment utiliser Visual Studio Code avec Electron et Typescript ?",
   "main": "index.js",
   "scripts": {
-    "test": "electron ."
+    "test": "electron index.html"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,5 @@
     "url": "https://github.com/pinacolada/ElectronFr/issues"
   },
   "homepage": "https://github.com/pinacolada/ElectronFr#readme",
-  "dependencies": {
-    "electron": "^1.7.9",
-    "typescript": "^2.6.2"
-  }
+  "dependencies": {}
 }

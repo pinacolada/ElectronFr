@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "test",
+            "problemMatcher": []
+        },         
+        {
+            "type": "shell", 
+            "command": "electron index.html",         
+            "label": "Launch Electron App"
+        } 
+    ]
+}
