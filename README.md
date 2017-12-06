@@ -40,15 +40,23 @@ Question finale : **Is this ok ?** (yes) Bah devinez quoi ? J'ai répondu **yes*
 
 Le fichier **package.json** est alors créé et j'y retrouve tout ce qui m'a été demandé.
 
-# Installer _Electron_
+# Installer _NodeJs_ comme dépendance
 
-Une commande dans _VSCode_ permet d'utiliser _Electron_ dans le dossier en cours. Il faut toujours vérifier que vous êtes dans le bon dossier car tout se passera dedans. Ensuite, il faut simplement taper la commande :
+Est-ce bien utile ? Nous avons NodeJs déjà installé, globalement, sur l'ordinateur. Pourquoi le réinstaller localement ? 
+Eh bien _Visual Studio Code_ nous informera sur les modules présents dans le dossier **node_modules** : il n'ira pas chercher ailleurs les informations pour nous aider à la saisie. il y a sans doute une commande qui lui permettrait de le faire... (à chercher)
+Exécuter la commande suivante :
+
+`npm install node -D`
+
+# Installer _Electron_ comme dépendance
+
+Une commande dans _Visual Studio Code_ permet d'utiliser _Electron_ dans le dossier en cours. Il faut toujours vérifier que vous êtes dans le bon dossier car tout se passera dedans. Ensuite, il faut simplement taper la commande :
 
 `npm install electron -D`.
 
 Après 21.7 secondes (chez moi) et plein de lignes étranges, vous verrez s'afficher, ce qui est rassurant, `npm info ok`.
 
-# Installer _Typescript_
+# Installer _Typescript_ comme dépendance
 
 Pour installer _Typescript_ il faut utiliser la même commande. On vérifie qu'on est toujours dans le dossier de travail, puis on tape la commande :
 
@@ -57,8 +65,8 @@ Pour installer _Typescript_ il faut utiliser la même commande. On vérifie qu'o
 Durée de l'installation : 2.62 secondes... Oui, ça va vite. 
 
 Et la fameuse ligne d'information `npm info ok` vous prouvera que tout s'est bien passé.
-La version installée est la **2.6.2** pour typescript et la **1.7.9** pour Electron.
-Nous venons d'installer 2 _dépendances_ dans notre projet (_package_) et cela se voit dans le fichier **package.json**.
+
+Nous venons d'installer 3 _dépendances_ dans notre projet (_package_) et cela se voit dans le fichier **package.json**.
 Il s'y est ajouté maintenant ceci : 
 ```json
   "dependencies": {
@@ -66,18 +74,22 @@ Il s'y est ajouté maintenant ceci :
     "typescript": "^2.6.2"
   }
 ```  
-Dans Visual Studio Code (que je nommerai maintenant simplement _VSCode_), le package est modifié automatiquement par **npm** quand on fait une installation, afin de correspondre aux dernières modifications. Il est donc important que le fichier **package.json** soit créé _avant_ les autres. 
+La version installée au moment où j'écris ces lignes est la **2.6.2** pour typescript et la **1.7.9** pour Electron.
+
+Dans _Visual Studio Code_, le package est donc modifié automatiquement par **npm** quand on fait une installation, afin de correspondre aux dernières modifications (addition ou suppression de module). 
+Il est donc important que le fichier **package.json** soit créé _avant_ les autres. 
 
 # Récapitulatif 
 
 * Créer le fichier **package.json** à l'aide de la commande `npm init`
-Installer ensuite les deux programmes suivants avec l'option **-D** (un tiret collé à la lettre d):
+Installer ensuite les trois programmes suivants avec l'option **-D** (un tiret collé à la lettre d):
 * le serveur de code **nodejs** à l'aide de la commande `npm install node -D`
 * le créateur d'application **electron** à l'aide de la commande `npm install electron -D`
-* le langage **typescript**  à l'aide de la commande `npm install typescript -D`.
-Installer avec **-D** signifie installer **comme dépendance** : installer des packages logiciels qui seront dans le dossier à la création mais qui seront retirés du package final à diffuser. Cela ne grossit que temporairement votre dossier et vous permet de bénéficier de toute la gestion de l'**IntelliSence** et de l'**autocomplétion** qui nous intéressent tant. Plus besoin de connaître une commande et ses paramètres par coeur. Le programme nous propose et nous donne directement accès à toutes les signatures de fonctions.
+* le langage **typescript**  à l'aide de la commande `npm install typescript -D
+`.
+Installer **comme dépendance** (avec l'option **-d**) signifie installer des packages qui seront présents à la conception mais qui seront retirés du package à la diffusion. Cela ne grossit donc que temporairement votre dossier et vous permet de bénéficier de toute la gestion de l'**IntelliSence** et de l'**autocomplétion** qui nous intéressent tant. Plus besoin de mémoriser une commande et ses paramètres. Le logiciel nous proposera l'accès à toutes les signatures de fonctions.
 
-C'était facile, non ? Et, petite remarque : tout ce que nous avons installé avec la commande **npm** peut se désinstaller avec la même commande et le mot clé **uninstall**.
+C'était facile, non ? Et, petite remarque : tout ce que nous avons installé avec la commande **npm** peut se désinstaller avec la même commande et le mot-clé **uninstall**.
 Pour le tester, faisons le chemin à l'envers :
 
 `npm uninstall electron
@@ -85,8 +97,7 @@ npm uninstall typescript`
 
 et regardez ce qui se passe dans le fichier **package.json** ainsi que dans le dossier **node_modules** de votre programme. 
 
-Vous pouvez donc maintenant installer dans votre programme les modules intéressants et vous en servir à votre guise.
-Testons-le avec les commandes suivantes :
+Vous pouvez donc maintenant installer dans votre programme les modules intéressants, les tester et vous en servir à votre guise. Si vous n'en voulez plus, vous pourrez les désinstaller à volonté. Testons-le avec les commandes suivantes :
 
 ```javascript 
 import fs = require("fs");
