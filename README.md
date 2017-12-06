@@ -5,7 +5,7 @@ Ce tutoriel s'adresse à un utilisateur francophone, travaillant sous Windows. I
 ## Les logiciels
 
 * Vous devez avoir [Visual Studio Code](https://code.visualstudio.com/) installé. Cet outil, créé lui-même avec Electron, est l'outil le plus pratique pour écrire et déboguer du javascript boosté.
-* Vous devez avoir aussi un compte sur Github ainsi que **Github pour Windows** installé. Si nécessaire, créez le compte après installation de [Github pour Windows](https://desktop.github.com/). C'est encore un logiciel écrit lui-même avec Electron ;) 
+* Vous devez avoir aussi un compte sur Github ainsi que **Github pour Windows** installé. Si nécessaire, créez le compte après installation de [Github pour Windows](https://desktop.github.com/). C'est encore un logiciel écrit lui-même avec _Electron_ ;) 
 * Créez maintenant, où vous voulez sur votre ordinateur, un dossier vide auquel vous donnerez le nom de votre programme. Ce nom doit être assez court et en minuscules. Evitez aussi les caractères spéciaux. Ce dossier sera bien entendu celui que vous synchroniserez sur Github afin d'en disposer sur votre ordinateur mais aussi partout où il vous prendra l'envie de modifier votre programme. Vous pourrez l'utiliser en équipe pour faire avancer votre projet.
 
 ## Tout ce que vous avez toujours supposé et que personne ne vous a dit :
@@ -14,10 +14,10 @@ L'utilisation d'_Electron_ avec _Typescript_ n'est pas simple. L'utilisation de 
 
 # Créer le fichier __package.json__
 
-Attention, nous n'allons pratiquement rien créer à la main car cette étape sert de définir le projet et d'informer les différents logiciels de ce qui sera la configuration du programme : elle est donc importante. 
+Attention, nous n'allons pratiquement rien créer à la main car cette étape permet de définir le projet et d'informer les différents logiciels de ce qui sera la configuration du programme : elle est donc importante. 
 
 On y donne _un nom_ au programme, _une description_, un _numéro de version_. Et tout ceci au format _json_. 
-On ouvre **VSCode**, on ouvre le dossier choisi puis on affiche l'**invite de commande**. Nous allons souvent l'utiliser.
+On ouvre _Visual Studio Code_, on ouvre le dossier choisi puis on affiche l'invite de commande. Nous allons souvent l'utiliser.
 Notre fichier sera créé de façon interactive. Si on a ouvert d'abord le dossier de travail, l'invite de commande indique le bon chemin. 
 Sinon, il faut se placer dessus à l'aide de la commande cd "dossier du programme". Je mets des guillemets au cas où il y a des espaces dans le nom du dossier. 
 On crée le fichier _package.json_ à l'aide de la commande suivante : `npm init`
@@ -55,6 +55,7 @@ Pour installer _Typescript_ il faut utiliser la même commande. On vérifie qu'o
 `npm install typescript -D`. 
 
 Durée de l'installation : 2.62 secondes... Oui, ça va vite. 
+
 Et la fameuse ligne d'information `npm info ok` vous prouvera que tout s'est bien passé.
 La version installée est la **2.6.2** pour typescript et la **1.7.9** pour Electron.
 Nous venons d'installer 2 _dépendances_ dans notre projet (_package_) et cela se voit dans le fichier **package.json**.
@@ -69,16 +70,29 @@ Dans Visual Studio Code (que je nommerai maintenant simplement _VSCode_), le pac
 
 # Récapitulatif 
 
-* [*] Créer le fichier **package.json** à l'aide de la commande `npm init`
-Installer ensuite _comme dépendances_ (donc avec l'option -D):
-* [*] Installer **nodejs** à l'aide de la commande `npm install node -D`
-* [*] Installer le créateur d'application **electron** à l'aide de la commande `npm install electron -D`
-* [*] Installer le langage **typescript**  à l'aide de la commande `npm install typescript -D`.
-Installer _comme dépendance_ signifie installer des logiciels qui seront dans le dossier à la création mais qui seront retirés du package créé pour être diffusé.
+* Créer le fichier **package.json** à l'aide de la commande `npm init`
+Installer ensuite les deux programmes suivants avec l'option **-D** (un tiret collé à la lettre d):
+* le serveur de code **nodejs** à l'aide de la commande `npm install node -D`
+* le créateur d'application **electron** à l'aide de la commande `npm install electron -D`
+* le langage **typescript**  à l'aide de la commande `npm install typescript -D`.
+Installer avec **-D** signifie installer **comme dépendance** : installer des packages logiciels qui seront dans le dossier à la création mais qui seront retirés du package final à diffuser. Cela ne grossit que temporairement votre dossier et vous permet de bénéficier de toute la gestion de l'**IntelliSence** et de l'**autocomplétion** qui nous intéressent tant. Plus besoin de connaître une commande et ses paramètres par coeur. Le programme nous propose et nous donne directement accès à toutes les signatures de fonctions.
 
-C'était facile, non ? Normalement, c'est aussi suffisant. _Vous pourriez commencer à coder_.
-En réalité, il nous faut aussi nous simplifier la vie en tant que codeur. Il y a d'autres choses à modifier.
+C'était facile, non ? Et, petite remarque : tout ce que nous avons installé avec la commande **npm** peut se désinstaller avec la même commande et le mot clé **uninstall**.
+Pour le tester, faisons le chemin à l'envers :
 
+`npm uninstall electron
+npm uninstall typescript`
+
+et regardez ce qui se passe dans le fichier **package.json** ainsi que dans le dossier **node_modules** de votre programme. 
+
+Vous pouvez donc maintenant installer dans votre programme les modules intéressants et vous en servir à votre guise.
+Testons-le avec les commandes suivantes :
+
+```javascript 
+import fs = require("fs");
+import http = require("http");
+import {BrowserWindow, app} from "electron"
+```
 # Syntaxe d'un fichier .md 
 
 Le fichier readme.md est un fichier spécial qui se trouve à la racine du package dans l'espace github créé. Ce fichier descriptif est celui que vous utilisez pour décrire ce que vous faites. C'est donc un fichier important... 
