@@ -18,10 +18,15 @@ Attention, nous n'allons pratiquement rien créer à la main car cette étape pe
 
 On y donne __un nom__ au programme, __une description__, un __numéro de version__. Et tout ceci au format __json__. 
 On ouvre **Visual Studio Code**, on ouvre le dossier choisi puis on affiche l'invite de commande. Nous allons souvent l'utiliser.
-Notre fichier sera créé de façon interactive. Si on a ouvert d'abord le dossier de travail, l'invite de commande indique le bon chemin. 
+
+Notre fichier sera créé de façon interactive. Si on a ouvert d'abord le dossier de travail, l'invite de commande indique le bon chemin.
+
 Sinon, il faut se placer dessus à l'aide de la commande `cd dossierDuProgramme`. 
+
 Mettre des guillemets autour du nom du dossier s'il comporte des espaces, ce qui n'est pas conseillé... 
+
 La commande qui permet de créer un dossier est `md`c'est-à-dire __Make directory__.
+
 On crée le fichier **package.json** à l'aide de la commande suivante : `npm init`
  
  Une suite de questions (simples) auxquelles on répond et le notre fichier apparaitra dans le dossier. 
@@ -44,13 +49,16 @@ Le fichier **package.json** est alors créé et j'y retrouve tout ce qui m'a ét
 
 # Installer les dépendances 
 Dans votre package.json, un certain nombre de modules vont être installés de façon temporaire. Ce seront les dépendances. Il peut y en avoir d'autres, mais celles que nous installons sont celles qui nous permettent de programmer.
+
 Installer **comme dépendance** (avec l'option **-d**) signifie installer des **modules** qui seront présents à la conception mais qui seront retirés du **package** à la diffusion. Cela ne grossit donc que temporairement votre dossier et vous permet de bénéficier de toute la gestion de l'**IntelliSence** et de l'**autocomplétion** qui nous intéressent tant. Plus besoin de mémoriser une commande et ses paramètres. Le logiciel nous proposera l'accès à toutes les signatures de fonctions.
 Nous parlerons un peu plus tard des **modules** et du **package**.
 
 ## Installer __NodeJs__ comme dépendance
 
 Est-ce bien utile ? Nous avons NodeJs déjà installé, globalement, sur l'ordinateur. Pourquoi le réinstaller localement ? 
+
 Eh bien __Visual Studio Code__ nous informera et utilisera l'intellisence sur les modules présents dans le dossier **node_modules** : il n'aura pas à chercher ailleurs les informations pour nous aider à la saisie.
+
 Exécuter la commande suivante :
 
 `npm install node -D`
@@ -85,6 +93,7 @@ Il s'y est ajouté maintenant ceci :
 La version installée au moment où j'écris ces lignes est la **2.6.2** pour typescript et la **1.7.9** pour Electron.
 
 Dans _Visual Studio Code_, le package est donc modifié automatiquement par **npm** quand on fait une installation, afin de correspondre aux dernières modifications (addition ou suppression de module). 
+
 Il est donc important que le fichier **package.json** soit créé _avant_ les autres. 
 
 # Récapitulatif 
@@ -116,9 +125,11 @@ Il lui manque un certain nombre de fichiers dont nous avons parlé mais que nous
 ## Le fichier __index.html__ :
 
 Commençons par le **fichier html**, que nous allons créer à la racine de notre package, pour ne pas avoir de souci de chemin.
-Cliquez dans **VSC** sur le dossier du programme. Ce dossier doit juste avoir un sous-dossier nommé **node_modules** et un fichier nommé **package.json**.  
-Cliquez sur l'icone **Nouveau fichier** et donnez comme nom "index.html". Vous vous trouverez dans l'éditeur, en haut de la page. Il suffit de taper un **point d'exclamation** suivi de **tab** pour que le fichier soit pré-rempli.
-Je modifie le langage `lang="fr"`, le title auquel je donne le titre de mon programme et j'insère un titre de niveau 1 (balise h1) quelconque afin de tester le résultat. Ce fichier html ne sera pas une simple page web mais bien l'interface utilisateur de mon programme Electron. Je peux y mettre des image, des boutons, tout le css et le javascript d'une page web. Créer une application en utilisant le mde de création d'une page web traditionnelle est donc très facile.
+* Cliquez dans **VSC** sur le dossier du programme. Ce dossier doit juste avoir un sous-dossier nommé **node_modules** et un fichier nommé **package.json**.  
+* Cliquez sur l'icone **Nouveau fichier** et donnez comme nom "index.html". Vous vous trouverez dans l'éditeur, en haut de la page. Il suffit de taper un **point d'exclamation** suivi de **tab** pour que le fichier soit pré-rempli.
+* Je modifie le langage `lang="fr"`, le title auquel je donne le titre de mon programme et j'insère un titre de niveau 1 (balise h1) quelconque afin de tester le résultat. 
+
+Ce fichier html ne sera pas une simple page web mais bien l'interface utilisateur de mon programme Electron. Je peux y mettre des image, des boutons, tout le css et le javascript d'une page web. Créer une application en utilisant le mde de création d'une page web traditionnelle est donc très facile.
 
 ## Le fichier __main.ts__ :
 
