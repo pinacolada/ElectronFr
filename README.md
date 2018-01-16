@@ -10,13 +10,13 @@ Ce tutoriel s'adresse à un utilisateur francophone, travaillant sous Windows. I
 
 ## Tout ce que vous avez toujours supposé et que personne ne vous a dit :
 
-L'utilisation d'*Electron* avec *Typescript* n'est pas simple. L'utilisation de **Typescript** dans **Visual Studio Code** n'est pas simple non plus. Nous allons nous compliquer la vie en ajoutant la gestion de notre dossier de travail sur **Github**. Nous voulons absolument l'**autocomplétion** de nos classes et des packages en **Typescript**, ainsi que l'**IntelliSence**. Sinon quelle utilité de passer par tous ces logiciels ? Voyons donc comment procéder.
+L'utilisation d'**Electron** avec **Typescript** n'est pas simple. L'utilisation de **Typescript** dans **Visual Studio Code** n'est pas simple non plus. Nous allons nous compliquer la vie en ajoutant la gestion de notre dossier de travail sur **Github**. Nous voulons absolument l'**autocomplétion** de nos classes et des packages en **Typescript**, ainsi que l'**IntelliSence**. Sinon quelle utilité de passer par tous ces logiciels ? Voyons donc comment procéder.
 
 # Créer le fichier **package.json**
 
 Attention, nous n'allons pratiquement rien créer à la main car cette étape permet de définir le projet et d'informer les différents logiciels de ce qui sera la configuration du programme : elle est donc importante. 
 
-On y donne __un nom__ au programme, __une description__, un __numéro de version__. Et tout ceci au format __json__. 
+On y donne un **nom** au programme, une **description**, un **numéro de version**. Et tout ceci au format __json__. 
 On ouvre **Visual Studio Code**, on ouvre le dossier choisi puis on affiche l'invite de commande. Nous allons souvent l'utiliser.
 
 Notre fichier sera créé de façon interactive. Si on a ouvert d'abord le dossier de travail, l'invite de commande indique le bon chemin.
@@ -53,25 +53,25 @@ Dans votre package.json, un certain nombre de modules vont être installés de f
 Installer **comme dépendance** (avec l'option **-d**) signifie installer des **modules** qui seront présents à la conception mais qui seront retirés du **package** à la diffusion. Cela ne grossit donc que temporairement votre dossier et vous permet de bénéficier de toute la gestion de l'**IntelliSence** et de l'**autocomplétion** qui nous intéressent tant. Plus besoin de mémoriser une commande et ses paramètres. Le logiciel nous proposera l'accès à toutes les signatures de fonctions.
 Nous parlerons un peu plus tard des **modules** et du **package**.
 
-## Installer __NodeJs__ comme dépendance
+## Installer **NodeJs** comme dépendance
 
 Est-ce bien utile ? Nous avons NodeJs déjà installé, globalement, sur l'ordinateur. Pourquoi le réinstaller localement ? 
 
-Eh bien __Visual Studio Code__ nous informera et utilisera l'intellisence sur les modules présents dans le dossier **node_modules** : il n'aura pas à chercher ailleurs les informations pour nous aider à la saisie.
+Eh bien **Visual Studio Code** nous informera et utilisera l'intellisence sur les modules présents dans le dossier __node_modules__ : il n'aura pas à chercher ailleurs les informations pour nous aider à la saisie.
 
 Exécuter la commande suivante :
 
 `npm install node -D`
 
-## Installer __Electron__ comme dépendance
+## Installer **Electron** comme dépendance
 
-Une commande dans __Visual Studio Code__ permet d'utiliser _Electron_ dans le dossier en cours. Il faut toujours vérifier que vous êtes dans le bon dossier car tout se passera dedans. Ensuite, il faut simplement taper la commande :
+Une commande dans **Visual Studio Code** permet d'utiliser __Electron__ dans le dossier en cours. Il faut toujours vérifier que vous êtes dans le bon dossier car tout se passera dedans. Ensuite, il faut simplement taper la commande :
 
 `npm install electron -D`.
 
 Après 21.7 secondes (chez moi) et plein de lignes étranges, vous verrez s'afficher, ce qui est rassurant, `npm info ok`.
 
-## Installer __Typescript__ comme dépendance
+## Installer **Typescript** comme dépendance
 
 Pour installer _Typescript_ il faut utiliser la même commande. On vérifie qu'on est toujours dans le dossier de travail, puis on tape la commande :
 
@@ -92,7 +92,7 @@ Il s'y est ajouté maintenant ceci :
 ```  
 La version installée au moment où j'écris ces lignes est la **2.6.2** pour typescript et la **1.7.9** pour Electron.
 
-Dans _Visual Studio Code_, le package est donc modifié automatiquement par **npm** quand on fait une installation, afin de correspondre aux dernières modifications (addition ou suppression de module). 
+Dans **Visual Studio Code**, le package est donc modifié automatiquement par **npm** quand on fait une installation, afin de correspondre aux dernières modifications (addition ou suppression de module). 
 
 Il est donc important que le fichier **package.json** soit créé _avant_ les autres. 
 
@@ -122,7 +122,7 @@ Vous pouvez donc maintenant installer dans votre programme les modules intéress
 Notre projet est un **package**, c'est-à-dire un groupe de fichiers reliés par ce fichier **package.json** qui sert à le décrire et à le diffuser.
 Il lui manque un certain nombre de fichiers dont nous avons parlé mais que nous n'avons pas encore créés : **main.js** ou **index.html**. Nous ne devrions pas créer main.**js** mais bien main.**ts** car node devrait transformer notre **ts** (typescript) en **js** javascript. 
 
-## Le fichier __index.html__ :
+## Le fichier **index.html** :
 
 Commençons par le **fichier html**, que nous allons créer à la racine de notre package, pour ne pas avoir de souci de chemin.
 * Cliquez dans **VSC** sur le dossier du programme. Ce dossier doit juste avoir un sous-dossier nommé **node_modules** et un fichier nommé **package.json**.  
@@ -131,16 +131,16 @@ Commençons par le **fichier html**, que nous allons créer à la racine de notr
 
 Ce fichier html ne sera pas une simple page web mais bien l'interface utilisateur de mon programme Electron. Je peux y mettre des image, des boutons, tout le css et le javascript d'une page web. Créer une application en utilisant le mde de création d'une page web traditionnelle est donc très facile.
 
-## Le fichier __main.ts__ :
+## Le fichier **main.ts** :
 
 ```javascript 
 import fs = require("fs");
 import http = require("http");
 import {BrowserWindow, app} from "electron"
 ```
-# Syntaxe d'un fichier .md 
+# Syntaxe d'un fichier **MarkDown**
 
-Le fichier readme.md est un fichier spécial qui se trouve à la racine du package dans l'espace github créé. Ce fichier descriptif est celui que vous utilisez pour décrire ce que vous faites. C'est donc un fichier important... 
+Le fichier **readme.md** est un fichier spécial qui se trouve à la racine du package dans l'espace github créé. Ce fichier descriptif est celui que vous utilisez pour décrire ce que vous faites. C'est donc un fichier important... 
 
 Comme nous l'avons dit, c'est un [fichier Markdown](https://fr.wikipedia.org/wiki/Markdown) avec l'extension **.md** correspondante. Ce type de fichier dispose d'un balisage facile à mémoriser et qui s'adapte au texte normal. 
 Une puce ? C'est juste une étoile en début de ligne, par exemple. On crée très facilement une **liste à puces** facilement ainsi. On peut indenter les listes à puces les unes dans les autres. Il suffit de mettre un nombre constant d'espaces pour créer ces indentations. 
@@ -154,7 +154,9 @@ Une puce ? C'est juste une étoile en début de ligne, par exemple. On crée tr�
 * **Italiques** : Une étoile ou un souligné bas : ceci est en *italiques*, et ceci _aussi_ alors que ceci n'est qu'en **gras**.
 * **Souligné** : Deux traits __soulignés bas__ soulignaient (avant) le texte __mis en valeur__. Maintenant il est juste en gras.
 ## Liens et images
-* Pour créer un lien on écrit le texte du lien entre crochets droits et l'url entre parenthèses juste après. Le _title_ facultatif est dans les parenthèses, séparé du lien par un espace.
-* Pour afficher une image, l'ordre est différent : on met d'abord un point d'exclamation, puis le texte de remplacement entre crochets, l'url et le title entre parenthèses enfin. 
+* Pour créer un lien on écrit le texte du lien entre crochets droits et l'url entre parenthèses juste après. Le **title** facultatif est dans les parenthèses, séparé du lien par un espace.
+* Pour afficher une **image**, l'ordre est différent : on met d'abord un point d'exclamation, puis le texte de remplacement entre crochets, l'url et le title entre parenthèses enfin. 
+
+En voici un exemple :
 
 ![Couverture de l'album de Serge Gainsbourg](http://pina34colada.free.fr/img/gainsbourg.jpg).
