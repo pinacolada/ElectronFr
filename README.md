@@ -96,15 +96,6 @@ Dans **Visual Studio Code**, le package est donc modifié automatiquement par **
 
 Il est donc important que le fichier **package.json** soit créé _avant_ les autres. 
 
-# Récapitulatif 
-
-* Créer le fichier **package.json** à l'aide de la commande `npm init`
-Installer ensuite les trois programmes suivants avec l'option **-D** (un tiret collé à la lettre d):
-* le serveur de code **nodejs** à l'aide de la commande `npm install node -D`
-* le créateur d'application **electron** à l'aide de la commande `npm install electron -D`
-* le langage **typescript**  à l'aide de la commande `npm install typescript -D
-`.
-
 C'était facile, non ? Et, petite remarque : tout ce que nous avons installé avec la commande **npm** peut se désinstaller avec la même commande et le mot-clé **uninstall**.
 
 Pour le tester, faites le chemin à l'envers (n'oubliez pas le **-D** en fin de commande !):
@@ -112,15 +103,26 @@ Pour le tester, faites le chemin à l'envers (n'oubliez pas le **-D** en fin de 
 npm uninstall electron -d
 npm uninstall typescript -d`
 ```
-et regardez ce qui se passe dans le fichier **package.json** ainsi que dans le dossier **node_modules** de votre programme. 
-Evidemment, refaites le dans le bon sens afin d'avoir la configuration correcte.
+Et regardez ce qui se passe dans le fichier **package.json** ainsi que dans le dossier **node_modules** de votre programme. 
+Evidemment, refaites-le dans le bon sens afin de retrouver la configuration désirée.
 
 Vous pouvez donc maintenant installer dans votre programme les modules intéressants, les tester et vous en servir à votre guise. Si vous n'en voulez plus, vous pourrez donc les désinstaller à volonté. 
 
-# Notre projet
+# Récapitulatif 
+
+* Créer le fichier **package.json** à l'aide de la commande `npm init`.
+* Installer ensuite les trois programmes suivants avec l'option **-D** (un tiret collé à la lettre d):
+* le serveur de code **nodejs** à l'aide de la commande `npm install node -D`
+* le créateur d'application **electron** à l'aide de la commande `npm install electron -D`
+* le langage **typescript**  à l'aide de la commande `npm install typescript -D`
+* les autres modules utiles, de la même façon.
+
+## Notre projet
 
 Notre projet est un **package**, c'est-à-dire un groupe de fichiers reliés par ce fichier **package.json** qui sert à le décrire et à le diffuser.
-Il lui manque un certain nombre de fichiers dont nous avons parlé mais que nous n'avons pas encore créés : **main.js** ou **index.html**. Nous ne devrions pas créer main.**js** mais bien main.**ts** car node devrait transformer notre **ts** (typescript) en **js** javascript. 
+Il lui manque un certain nombre de fichiers dont nous avons parlé mais que nous n'avons pas encore créés : **main.js** ou **index.html**. Nous ne devrions pas créer main.**js** mais bien main.**ts** car le compilateur typescript devrait transformer notre **ts** (typescript) en **js** javascript. 
+
+## Le compilateur typescript :
 
 ## Le fichier **index.html** :
 
